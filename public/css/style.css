@@ -68,14 +68,14 @@ ul {
   gap: 5px;
   width: 320px;
 }
-.search-section .form input {
+.search-section .form .search {
   flex: 80%;
   padding: 10px;
   outline: none;
   border: 1px solid #ccc;
   border-radius: 12px;
 }
-.search-section .form button {
+.search-section .form .search-button {
   border: none;
   outline: none;
   padding: 10px;
