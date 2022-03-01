@@ -75,7 +75,7 @@ ul {
   border: 1px solid #ccc;
   border-radius: 12px;
 }
-.search-section .form .search-button {
+#search-button {
   border: none;
   outline: none;
   padding: 10px;
