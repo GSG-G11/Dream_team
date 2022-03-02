@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 const app = require('./app');
 
 // listen on dynamic port number

@@ -5,7 +5,7 @@ const createElement = (
   className,
   textNode,
   attribute,
-  attributeValue
+  attributeValue,
 ) => {
   const variable = document.createElement(tagName);
   variable.className = className;
