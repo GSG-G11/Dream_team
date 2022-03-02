@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-unused-vars */
 const path = require('path');
 
 const clientError = (req, res) => {

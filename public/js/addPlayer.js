@@ -13,32 +13,29 @@ const addPlayer = () => {
       const itemNumbers = [...numbers];
       itemNumbers.forEach((num, i) => {
         num.addEventListener('click', (n, j) => {
-          const playerCard = num.parentElement.parentElement.parentElement;
-          playerCard.style.filter = 'grayscale(1)';
-          playerCard.style.pointerEvents = 'none';
-          squadCards[n.target.getAttribute('data-num')].innerHTML = '';
-          if (
-            +n.target.getAttribute('data-num') ===
-            squadCards[n.target.getAttribute('data-num')].getAttribute(
-              'data-player'
-            ) -
-              1
-          ) {
-            const playerImageInSquad = createElement(
-              'img',
-              'player-in-squad',
-              '',
-              'src',
-              e.target.parentNode.nextElementSibling.src
-            );
-            const removeImage = createElement('span', 'remove-icon', '-');
-            squadCards[n.target.getAttribute('data-num')].append(
-              playerImageInSquad,
-              removeImage
-            );
-            e.target.nextElementSibling.style.height = '0';
-            e.target.nextElementSibling.style.padding = '0';
-            removeImageFromSquad(removeImage, playerCard, i);
+          if (squadCards[n.target.getAttribute('data-num')].firstChild.tagName !== 'IMG') {
+            const playerCard = num.parentElement.parentElement.parentElement;
+            playerCard.style.filter = 'grayscale(1)';
+            playerCard.style.pointerEvents = 'none';
+            squadCards[n.target.getAttribute('data-num')].innerHTML = '';
+            if (
+              +n.target.getAttribute('data-num') === squadCards[n.target.getAttribute('data-num')].getAttribute('data-player') - 1) {
+              const playerImageInSquad = createElement(
+                'img',
+                'player-in-squad',
+                '',
+                'src',
+                e.target.parentNode.nextElementSibling.src,
+              );
+              const removeImage = createElement('span', 'remove-icon', '-');
+              squadCards[n.target.getAttribute('data-num')].append(
+                playerImageInSquad,
+                removeImage,
+              );
+              e.target.nextElementSibling.style.height = '0';
+              e.target.nextElementSibling.style.padding = '0';
+              removeImageFromSquad(removeImage, playerCard, i);
+            }
           }
         });
       });

@@ -11,9 +11,7 @@ app.disable('x-powered-by');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(
-  express.static(path.join(__dirname, '..', 'public'), { maxAge: '30d' })
-);
+app.use(express.static(path.join(__dirname, '..', 'public'), { maxAge: '30d' }));
 app.use(playerPost);
 app.use(clientError);
 app.use(serverError);
