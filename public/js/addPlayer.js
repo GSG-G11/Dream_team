@@ -7,7 +7,6 @@ const addPlayer = () => {
   const addBtns = document.querySelectorAll('.plus-icon');
   addBtns.forEach((element) => {
     element.addEventListener('click', (e) => {
-      console.log(123);
       e.target.nextElementSibling.style.height = '240px';
       e.target.nextElementSibling.style.padding = '4px 0';
       const numbers = e.target.nextElementSibling.children;
