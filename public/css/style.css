@@ -32,20 +32,32 @@ ul {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(59, 72, 88, 0.774);
 }
+/* ----------------------------------------------
+                Search Section Style
+------------------------------------------------*/
 .container {
   display: flex;
   height: 100vh;
   overflow: hidden;
 }
-/* ----------------------------------------------
-                Search Section Style
-------------------------------------------------*/
+@media (max-width: 730px) {
+  .container {
+    flex-direction: column;
+    overflow: visible;
+  }
+}
 .search-section {
   flex: 50%;
   text-align: center;
   padding: 50px 15px;
   position: relative;
   overflow-y: scroll;
+}
+@media (max-width: 730px) {
+  .search-section {
+    order: 2;
+    overflow-y: visible;
+  }
 }
 .search-section .logo {
   max-width: 100%;
@@ -60,13 +72,18 @@ ul {
   color: #333;
   margin-bottom: 20px;
 }
+@media (max-width: 730px) {
+  .search-section h1 {
+    font-size: 24px;
+  }
+}
 .search-section .form {
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
-  width: 320px;
+  max-width: 320px;
 }
 .search-section .form .search {
   flex: 80%;
@@ -160,20 +177,45 @@ ul {
   flex: 50%;
   position: relative;
 }
+@media (max-width: 730px) {
+  .squad {
+    order: 1;
+  }
+}
 .squad img {
   max-width: 100%;
   height: 100vh;
   width: 100%;
+  display: block;
+}
+@media (max-width: 730px) {
+  .squad img {
+    max-height: 450px;
+    object-fit: contain;
+  }
 }
 .squad .player {
-  width: 80px;
-  height: 84px;
+  width: 74px;
+  height: 74px;
   background-color: #ffffff94;
   border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
+}
+
+@media (max-width: 900px) {
+  .squad .player {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 730px) {
+  .squad .player {
+    width: 40px;
+    height: 40px;
+  }
 }
 .squad .player .player-in-squad {
   object-fit: contain;
@@ -220,14 +262,59 @@ ul {
   top: 120px;
   left: 110px;
 }
+@media (max-width: 820px) {
+  .squad .player:nth-of-type(2) {
+    left: 90px;
+  }
+}
+@media (max-width: 730px) {
+  .squad .player:nth-of-type(2) {
+    left: 270px;
+  }
+}
+@media (max-width: 400px) {
+  .squad .player:nth-of-type(2) {
+    left: 110px;
+  }
+}
 .squad .player:nth-of-type(3) {
   top: 120px;
   right: 110px;
+}
+@media (max-width: 820px) {
+  .squad .player:nth-of-type(3) {
+    right: 90px;
+  }
+}
+@media (max-width: 730px) {
+  .squad .player:nth-of-type(3) {
+    right: 270px;
+  }
+}
+@media (max-width: 400px) {
+  .squad .player:nth-of-type(3) {
+    right: 110px;
+  }
 }
 .squad .player:nth-of-type(4) {
   top: 50%;
   transform: translateY(-50%);
   left: 65px;
+}
+@media (max-width: 820px) {
+  .squad .player:nth-of-type(4) {
+    left: 45px;
+  }
+}
+@media (max-width: 730px) {
+  .squad .player:nth-of-type(4) {
+    left: 260px;
+  }
+}
+@media (max-width: 400px) {
+  .squad .player:nth-of-type(4) {
+    left: 70px;
+  }
 }
 .squad .player:nth-of-type(5) {
   top: 50%;
@@ -239,21 +326,105 @@ ul {
   transform: translateY(-50%);
   right: 65px;
 }
+@media (max-width: 820px) {
+  .squad .player:nth-of-type(6) {
+    right: 45px;
+  }
+}
+@media (max-width: 730px) {
+  .squad .player:nth-of-type(6) {
+    right: 260px;
+  }
+}
+@media (max-width: 400px) {
+  .squad .player:nth-of-type(6) {
+    right: 70px;
+  }
+}
 .squad .player:nth-of-type(7) {
   bottom: 155px;
   left: 20px;
+}
+@media (max-width: 730px) {
+  .squad .player:nth-of-type(7) {
+    bottom: 110px;
+    left: 240px;
+  }
+}
+@media (max-width: 400px) {
+  .squad .player:nth-of-type(7) {
+    left: 52px;
+  }
 }
 .squad .player:nth-of-type(8) {
   bottom: 120px;
   left: 185px;
 }
+@media (max-width: 1050px) {
+  .squad .player:nth-of-type(8) {
+    bottom: 110px;
+    left: 140px;
+  }
+}
+@media (max-width: 820px) {
+  .squad .player:nth-of-type(8) {
+    bottom: 110px;
+    left: 120px;
+  }
+}
+@media (max-width: 730px) {
+  .squad .player:nth-of-type(8) {
+    bottom: 90px;
+    left: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .squad .player:nth-of-type(8) {
+    left: 110px;
+  }
+}
 .squad .player:nth-of-type(9) {
   bottom: 120px;
   right: 186px;
 }
+@media (max-width: 1050px) {
+  .squad .player:nth-of-type(9) {
+    bottom: 110px;
+    right: 140px;
+  }
+}
+@media (max-width: 820px) {
+  .squad .player:nth-of-type(9) {
+    bottom: 110px;
+    right: 120px;
+  }
+}
+@media (max-width: 730px) {
+  .squad .player:nth-of-type(9) {
+    bottom: 90px;
+    right: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .squad .player:nth-of-type(9) {
+    right: 110px;
+  }
+}
 .squad .player:nth-of-type(10) {
   bottom: 155px;
   right: 20px;
+}
+@media (max-width: 730px) {
+  .squad .player:nth-of-type(10) {
+    bottom: 110px;
+    right: 240px;
+  }
+}
+@media (max-width: 400px) {
+  .squad .player:nth-of-type(10) {
+    bottom: 110px;
+    right: 50px;
+  }
 }
 .squad .player:nth-of-type(11) {
   bottom: 30px;
