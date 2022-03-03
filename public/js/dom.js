@@ -6,8 +6,9 @@ const playerContainer = document.querySelector('.players-container');
 const squadCards = document.querySelectorAll('.player');
 const searchInput = document.getElementById('search');
 const serachButton = document.getElementById('search-button');
+const form = document.querySelector('.form');
 
-serachButton.addEventListener('click', (elem) => {
+form.addEventListener('submit', (elem) => {
   while (playerContainer.firstChild) {
     playerContainer.removeChild(playerContainer.lastChild);
   }
